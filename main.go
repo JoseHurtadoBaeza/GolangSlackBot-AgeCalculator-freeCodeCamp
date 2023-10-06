@@ -10,7 +10,7 @@ import (
 	"github.com/shomali11/slacker"
 )
 
-// This is not necessary, but it give us information to learning purposes.
+// This is not necessary, but it give us information for learning purposes.
 func printCommandEvents(analyticsChannel <-chan *slacker.CommandEvent) {
 
 	for event := range analyticsChannel {
@@ -25,9 +25,6 @@ func printCommandEvents(analyticsChannel <-chan *slacker.CommandEvent) {
 }
 
 func main() {
-
-	//os.Setenv("SLACK_BOT_TOKEN", "...")
-	//os.Setenv("SLACK_APP_TOKEN", "...")
 
 	bot := slacker.NewClient(os.Getenv("SLACK_BOT_TOKEN"), os.Getenv("SLACK_APP_TOKEN"))
 
